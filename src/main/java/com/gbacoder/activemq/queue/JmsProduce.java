@@ -10,7 +10,7 @@ import javax.jms.*;
  */
 public class JmsProduce {
 
-    public final static String ACTIVEMQ_URL = "tcp://http://192.168.2.100:61616";
+    public final static String ACTIVEMQ_URL = "tcp://192.168.2.100:61616";
     public final static String QUEUE_NAME = "queue01";
 
     public static void main(String[] args) throws JMSException {
