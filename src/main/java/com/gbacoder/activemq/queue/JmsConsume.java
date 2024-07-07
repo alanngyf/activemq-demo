@@ -7,6 +7,13 @@ import javax.jms.*;
 /**
  * @author alanulog
  * @create 7/6/2024 9:31 PM
+ *
+ * Receive Method
+ * Synchronous Processing: The receive method retrieves messages synchronously. The consumer explicitly calls receive to get the next message.
+ * Blocking: The receive method can block the application until a message arrives or a timeout occurs, depending on the method variant used.
+ * Direct Control: Using receive, the application has direct control over when to check for messages and how to handle them.
+ * Variants: There are different receive methods, such as receive(), which blocks indefinitely, receive(long timeout),
+ *   which blocks for a specified amount of time, and receiveNoWait(), which does not block at all.
  */
 public class JmsConsume {
 
