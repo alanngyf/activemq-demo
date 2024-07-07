@@ -7,6 +7,8 @@ import javax.jms.*;
 /**
  * @author alanulog
  * @create 7/6/2024 8:24 PM
+ *
+ * point to point
  */
 public class JmsProduce {
 

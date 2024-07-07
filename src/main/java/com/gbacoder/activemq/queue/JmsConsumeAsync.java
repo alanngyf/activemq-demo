@@ -8,6 +8,12 @@ import java.io.IOException;
 /**
  * @author alanulog
  * @create 7/7/2024 2:24 PM
+ *
+ * MessageListener
+ * Asynchronous Processing: With a MessageListener, messages are consumed asynchronously. You set up a listener that is automatically notified when a message arrives.
+ * Event-driven: The MessageListener interface is a callback interface. When a message arrives, the onMessage method is called automatically.
+ * Non-blocking: Since it operates asynchronously, the listener does not block the application, allowing it to perform other tasks while waiting for messages.
+ * Implementation: You implement the MessageListener interface and register it with the consumer.
  */
 public class JmsConsumeAsync {
 
