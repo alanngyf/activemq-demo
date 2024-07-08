@@ -4,6 +4,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 import java.io.IOException;
+import java.util.function.Consumer;
 
 /**
  * @author alanulog
@@ -45,6 +46,16 @@ public class JmsConsumeAsync {
                     }
 
                     System.out.println("***onMessageListener: Consumer obtains msg: "+ text);
+                }
+
+                if (null != message && message instanceof MapMessage) {
+                    MapMessage msg = (MapMessage) message;
+                    try {
+                        String text = msg.getString("k1");
+                        System.out.println("***onMessageListener: Consumer obtains MapMessage: k1----"+ text);
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });

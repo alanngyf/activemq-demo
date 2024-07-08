@@ -42,6 +42,15 @@ public class JmsProduce {
             producer.send(textMessage);
         }
 
+        // 5.1 send message
+        for (int i = 0; i < 3; i++) {
+            // 5.2 create text message
+            MapMessage mapMessage = session.createMapMessage();
+            mapMessage.setString("k1", "message-v1");
+            // 5.3 producer sends msg to mq broker
+            producer.send(mapMessage);
+        }
+
         // 6. close resource
         producer.close();
         session.close();
